@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>梅赛德斯奔驰</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+  <link rel="stylesheet" href="./src/styles/clientlib-all.css">
+  
+</head>
+<body class="page homepage">
+<div class="js-modal-page">
+  <!-- header  -->
+  <header class="header">
+    <div class="menu-toggle">
+      <div class="menu-toggle__parent">
+       <a href="#">
+         <img src="./src/img/mercedes-benz-logo-desktop.png" alt="Mercedes-ben Logo" class="menu-toggle__logo-img">
+       </a>
+       <a class="menu-toggle__cta">
+         <div class="menu-toggle__hamburger">
+           <span class="menu-toggle__hamburger-line"></span>
+           <span class="menu-toggle__hamburger-line"></span>
+           <span class="menu-toggle__hamburger-line"></span>
+         </div>
+       </a> 
+      </div>
+    </div>
+    <div class="top-nav" id="top-nav">
+      <div class="top-nav__level wrapper">
+        <ul class="sub-nav__level sub-nav__level--top sub-nav__level--login">
+          <li class="top-nav__item top-nav__item--dealer-action">
+            <a href="#" class="top-nav__link suser-login__link--desktop">
+              <span class="top-nav__label">登录</span>
+            </a>
+          </li>
+          <li class="top-nav__item top-nav__item--dealer-action top-nav__item--dealer-action--separator"></li>
+          <li class="top-nav__item top-nav__item--dealer-action">
+            <a href="#" class="top-nav__link user-register__link--desktop">
+              <span class="top-nav__label">注册</span>
+            </a>
+            <input type="hidden" id="searchResutPath" name="searchResultPath" value="/admin/Search.html?q=">
+            <input type="hidden" name="placehodlerText" value="搜索梅赛德斯-奔驰">
+          </li>
+        </ul>
+        <ul class="sub-nav__level sub-nav__level--top sub-nav__level--loggedin hidden">
+          <li>
+            <a href="#" class="sub-nav__level--top-user">
+              <i class="sub-nav__level-member-icon icon-member"></i>
+              "你好,"
+              <span class="sub-nav__level--username"></span>
+            </a>
+            <ul class="sub-nav__level--top-dropdown hidden">
+              <li class="account__dropdown--username"></li>
+              <li class="account__dropdown--orders">
+                <a href="#">我的订单</a>
+              </li>
+              <li><a href="#" class="change-password__link--desktop">修改密码</a></li>
+              <li><a href="#" class="user-logout__link--desktop">退出登录</a></li>
+            </ul>
+          </li>
+        </ul>
+        <ul class="sub-nav__level sub-nav__level--left">
+          <li class="top-nav__item top-nav__item--company-title">
+            <a href="#" class="top-nav__link">
+              <span class="logo__container top-nav__span">
+                <img src="./src/img/mercedes-benz-logo-desktop.png" alt="" class="mercedes-benz-logo">
+              </span>
+            </a>
+          </li>
+          <li class="top-nav__item">
+            <ul>
+              <li class="top-nav__item">
+                <a href="#" class="top-nav__link top-nav__link_parent top-nav__dropdown top-nav__link--active">
+                  <span class="top-nav__label">车型</span>
+                </a>
+              </li>
+              <li class="top-nav__item">
+                <a href="#" class="top-nav__link top-nav__link_parent top-nav__dropdown">
+                  <span class="top-nav__label">购车指南</span>
+                </a>
+              </li>
+              <li class="top-nav__item">
+                <a href="#" class="top-nav__link top-nav__link_parent top-nav__dropdown">
+                  <span class="top-nav__label">客户服务</span>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="top-nav__item">
+            <ul>
+              <li class="top-nav__item">
+                <a href="#" class="top-nav__link top-nav__link_parent">
+                  <span class="top-nav__label">Mercedes me</span>
+                </a>
+              </li>
+              <li class="top-nav__item">
+                <a href="#" class="top-nav__link top-nav__link_parent">
+                  <span class="top-nav__label">梅赛德斯-AMG</span>
+                </a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+        <ul class="sub-nav__level sub-nav__level--right">
+          <li class="top-nav__item">
+            <a href="#" class="top-nav__link" id="top-nav__search">
+              <i class="icon-search top-nav__label">
+                <svg class="icon" aria-hidden="true">
+                  <use xlink:href="#icon-search1"></use>
+                </svg>
+              </i>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div>
+      <div class="search-nav">
+        <div class="wrapper">
+          <form action="/admin/Search.html?q=" role="search" method="get">
+            <input type="text" class="search-nav__input" id="header-search" maxlength="50" autocomplete="off" placeholder="搜索梅赛德斯-奔驰" name="q">
+            <a href="#" class="search-nav__btn" id="search-nav__btn">
+              <svg class="icon icon-search1" aria-hidden="true">
+                  <use xlink:href="#icon-search1"></use>
+              </svg>
+              <svg class="icon icon-jiantouarrow484" aria-hidden="true">
+                  <use xlink:href="#icon-jiantouarrow484"></use>
+              </svg>
+            </a>
+            <div class="search-nav-auto-hidden" id="autocomplete-list"></div>
+          </form>
+        </div>
+      </div>
+      <div class="data-menu-item-content">
+        <div class="data-menu-item-content__search-container"></div>
+        <div class="data-menu-item-content-0 data-menu-item-content__sub menuFadeDown">
+          <div class="wrapper hidden-sm">
+            <div class="top-nav__level--left-mobile">
+              <a href="#">车型</a>
+            </div>
+          </div>
+          <div class="data-menu-item-content__sub__mobile">
+            <div class="data-menu-item-content__sub__mobile__back">车型</div>
+            <div class="global-navigation-secion-heading">
+              <div class="wrapper">
+                <section class="global-navigation__section-heading">所有车型</section>
+              </div>
+            </div>
+            <div class="vehicle-nav">
+              <div class="mega-menu-container">
+                <ul class="menu-car-list-mobile wrapper">
+                  <li class="menu-car-list-mobile__li menu-car-list-mobile__li--active">轿车</li>
+                  <li class="menu-car-list-mobile__li">SUV</li>
+                  <li class="menu-car-list-mobile__li">轿跑车 & 敞篷跑车</li>
+                  <li class="menu-car-list-mobile__li">MPV</li>
+                </ul>
+                <ul class="menuCartype wrapper">
+                  <div class="menuCartype__container appear">
+                    <div class="click-left">
+                      <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-jiantou_zuo"></use>
+                      </svg>
+                    </div>
+                    <div class="click-right">
+                      <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-jiantou"></use>
+                      </svg>
+                    </div>
+                    <li class="menuCartype__li appear">
+                      <div class="menuCartype__li__single-name">轿车</div>
+                      <ul class="menuCartype__li__onetype">
+                        <li class="menuCartype__li__onetype__li">
+                          <div class="menuCartype__li__onetype__li__img">
+                            <img src="https://www.mercedes-benz.com.cn/content/dam/mb-vehicles-data-cn/nav/sedan/s-class/s63-s65/L400.png" alt="S级轿车" class="vehicle-data__info-image lazy-loader__asset lazy-loader__asset--load">
+                          </div>
+                          <div class="menuCartype__li__onetype__mobileTypeName">S</div>
+                          <span class="menuCartype__li__onetype__mobileTypeText">级</span>
+                          <div class="menuCartype__li__onetype__li__text">
+                            <a href="#" class="menuCartype__li__onetype__li__text__link">
+                              <p class="menuCartype__li__onetype__li__text__carname">S级轿车</p>
+                              <p class="menuCartype__li__onetype__li__text__price">￥ 86.38 万起</p>
+                            </a>
+                          </div>
+                          <div class="menuCartype__li__onetype__li__text">
+                            <a href="#" class="menuCartype__li__onetype__li__text__link">
+                              <p class="menuCartype__li__onetype__li__text__carname">
+                                梅赛德斯-迈巴赫S级轿车
+                              </p>
+                              <p class="menuCartype__li__onetype__li__text__price">￥ 140.88 万起</p>
+                            </a>
+                          </div>
+                          <div class="menuCartype__li__onetype__li__text">
+                            <a href="#" class="menuCartype__li__onetype__li__text__link">
+                              <p class="menuCartype__li__onetype__li__text__carname">梅赛德斯-AMG S 63 L 4MATIC+<br>梅赛德斯-AMG S 65 L</p>
+                              <p class="menuCartype__li__onetype__li__text__price">￥ 232.88 万起</p>
+                            </a>
+                          </div>
+                        </li>
+                        <li class="menuCartype__li__onetype__li">
+                          <div class="menuCartype__li__onetype__li__img">
+                            <img src="https://www.mercedes-benz.com.cn/content/dam/mb-vehicles-data-cn/nav/sedan/e-class/e-class-l/L400.png" alt="E级轿车" class="vehicle-data__info-image lazy-loader__asset lazy-loader__asset--load">
+                          </div>
+                          <div class="menuCartype__li__onetype__mobileTypeName">E</div>
+                          <span class="menuCartype__li__onetype__mobileTypeText">级</span>
+                          <div class="menuCartype__li__onetype__li__text">
+                            <a href="#" class="menuCartype__li__onetype__li__text__link">
+                              <p class="menuCartype__li__onetype__li__text__carname">E级轿车</p>
+                              <p class="menuCartype__li__onetype__li__text__price">￥ 43.58 万起</p>
+                            </a>
+                          </div>
+                          <div class="menuCartype__li__onetype__li__text">
+                            <a href="#" class="menuCartype__li__onetype__li__text__link">
+                              <p class="menuCartype__li__onetype__li__text__carname">
+                                长轴距E级运动轿车
+                              </p>
+                              <p class="menuCartype__li__onetype__li__text__price">￥ 43.58 万起</p>
+                            </a>
+                          </div>
+                          <div class="menuCartype__li__onetype__li__text">
+                            <a href="#" class="menuCartype__li__onetype__li__text__link">
+                              <p class="menuCartype__li__onetype__li__text__carname">标准轴距E级运动版</p>
+                              <p class="menuCartype__li__onetype__li__text__price">￥ 45.38 万起</p>
+                            </a>
+                          </div>
+                          <div class="menuCartype__li__onetype__li__text">
+                            <a href="#" class="menuCartype__li__onetype__li__text__link">
+                              <p class="menuCartype__li__onetype__li__text__carname">梅赛德斯-AMG E 43 4MATIC 特别版</p>
+                              <p class="menuCartype__li__onetype__li__text__price">￥ 91.88 万起</p>
+                            </a>
+                          </div>
+                          <div class="menuCartype__li__onetype__li__text">
+                            <a href="#" class="menuCartype__li__onetype__li__text__link">
+                              <p class="menuCartype__li__onetype__li__text__carname">全新梅赛德斯-AMG E 63 S 4MIATIC+特别版</p>
+                              <p class="menuCartype__li__onetype__li__text__price">￥ 45.38 万起</p>
+                            </a>
+                          </div>
+                        </li>
+                        <li class="menuCartype__li__onetype__li">
+                          <div class="menuCartype__li__onetype__li__img">
+                            <img src="https://www.mercedes-benz.com.cn/content/dam/mb-vehicles-data-cn/nav/sedan/c-class/c-class-l-sport/L400.png" alt="C级轿车" class="vehicle-data__info-image lazy-loader__asset lazy-loader__asset--load">
+                          </div>
+                          <div class="menuCartype__li__onetype__mobileTypeName">C</div>
+                          <span class="menuCartype__li__onetype__mobileTypeText">级</span>
+                          <div class="menuCartype__li__onetype__li__text">
+                            <a href="#" class="menuCartype__li__onetype__li__text__link">
+                              <p class="menuCartype__li__onetype__li__text__carname">长轴距C级运动轿车</p>
+                              <p class="menuCartype__li__onetype__li__text__price">￥ 31.58 万起</p>
+                            </a>
+                          </div>
+                          <div class="menuCartype__li__onetype__li__text">
+                            <a href="#" class="menuCartype__li__onetype__li__text__link">
+                              <p class="menuCartype__li__onetype__li__text__carname">
+                                标准轴距C级车运动版
+                              </p>
+                              <p class="menuCartype__li__onetype__li__text__price">￥ 31.88 万起</p>
+                            </a>
+                          </div>
+                          <div class="menuCartype__li__onetype__li__text">
+                            <a href="#" class="menuCartype__li__onetype__li__text__link">
+                              <p class="menuCartype__li__onetype__li__text__carname">长轴距C级轿车</p>
+                              <p class="menuCartype__li__onetype__li__text__price">￥ 32.38 万起</p>
+                            </a>
+                          </div>
+                          <div class="menuCartype__li__onetype__li__text">
+                            <a href="#" class="menuCartype__li__onetype__li__text__link">
+                              <p class="menuCartype__li__onetype__li__text__carname">新一代C级旅行车</p>
+                              <p class="menuCartype__li__onetype__li__text__price">￥ 36.38 万起</p>
+                            </a>
+                          </div>
+                          <div class="menuCartype__li__onetype__li__text">
+                            <a href="#" class="menuCartype__li__onetype__li__text__link">
+                              <p class="menuCartype__li__onetype__li__text__carname">新一代梅赛德斯-AMG C 43</p>
+                              <p class="menuCartype__li__onetype__li__text__price">￥ 61.88 万起</p>
+                            </a>
+                          </div>
+                          <div class="menuCartype__li__onetype__li__text">
+                            <a href="#" class="menuCartype__li__onetype__li__text__link">
+                              <p class="menuCartype__li__onetype__li__text__carname">新一代梅赛德斯-AGM C 63</p>
+                              <p class="menuCartype__li__onetype__li__text__price">￥ 94.18 万起</p>
+                            </a>
+                          </div>
+                        </li>
+                        <li class="menuCartype__li__onetype__li">
+                          <div class="menuCartype__li__onetype__li__img">
+                            <img src="https://www.mercedes-benz.com.cn/content/dam/mb-vehicles-data-cn/nav/sedan/a-class/a-class-l/1.png" alt="A级轿车" class="vehicle-data__info-image lazy-loader__asset lazy-loader__asset--load">
+                          </div>
+                          <div class="menuCartype__li__onetype__mobileTypeName">A</div>
+                          <span class="menuCartype__li__onetype__mobileTypeText">级</span>
+                          <div class="menuCartype__li__onetype__li__text">
+                            <a href="#" class="menuCartype__li__onetype__li__text__link">
+                              <p class="menuCartype__li__onetype__li__text__carname">全新长轴距A级轿车</p>
+                              <p class="menuCartype__li__onetype__li__text__price">￥ 21.69 万起</p>
+                            </a>
+                          </div>
+                          <div class="menuCartype__li__onetype__li__text">
+                            <a href="#" class="menuCartype__li__onetype__li__text__link">
+                              <p class="menuCartype__li__onetype__li__text__carname">
+                                A级车
+                              </p>
+                              <p class="menuCartype__li__onetype__li__text__price">￥ 21.98 万起</p>
+                            </a>
+                          </div>
+                          <div class="menuCartype__li__onetype__li__text">
+                            <a href="#" class="menuCartype__li__onetype__li__text__link">
+                              <p class="menuCartype__li__onetype__li__text__carname">梅赛德斯-AMG A 45 4MATIC</p>
+                              <p class="menuCartype__li__onetype__li__text__price">￥ 46.48 万起</p>
+                            </a>
+                          </div>
+                        </li>
+                        <li class="menuCartype__li__onetype__li">
+                          <div class="menuCartype__li__onetype__li__img">
+                            <img src="https://www.mercedes-benz.com.cn/content/dam/mb-vehicles-data-cn/nav/sedan/a-class/a-class-l/1.png" alt="A级轿车" class="vehicle-data__info-image lazy-loader__asset lazy-loader__asset--load">
+                          </div>
+                          <div class="menuCartype__li__onetype__mobileTypeName">CLA</div>
+                          <span class="menuCartype__li__onetype__mobileTypeText"></span>
+                          <div class="menuCartype__li__onetype__li__text">
+                            <a href="#" class="menuCartype__li__onetype__li__text__link">
+                              <p class="menuCartype__li__onetype__li__text__carname">CLA运动轿车</p>
+                              <p class="menuCartype__li__onetype__li__text__price">￥ 23.78 万起</p>
+                            </a>
+                          </div>
+                          <div class="menuCartype__li__onetype__li__text">
+                            <a href="#" class="menuCartype__li__onetype__li__text__link">
+                              <p class="menuCartype__li__onetype__li__text__carname">
+                                梅赛德斯-AMG CLA 45
+                              </p>
+                              <p class="menuCartype__li__onetype__li__text__price">￥ 55.88 万起</p>
+                            </a>
+                          </div>
+                        </li>
+                        <li class="menuCartype__li__onetype__li">
+                      <div class="menuCartype__li__onetype__li__img">
+                        <img src="https://www.mercedes-benz.com.cn/content/dam/mb-vehicles-data-cn/nav/sedan/a-class/a-class-l/1.png" alt="A级轿车" class="vehicle-data__info-image lazy-loader__asset lazy-loader__asset--load">
+                      </div>
+                      <div class="menuCartype__li__onetype__mobileTypeName">B</div>
+                      <span class="menuCartype__li__onetype__mobileTypeText">级</span>
+                      <div class="menuCartype__li__onetype__li__text">
+                        <a href="#" class="menuCartype__li__onetype__li__text__link">
+                          <p class="menuCartype__li__onetype__li__text__carname">B级旅行运动版</p>
+                          <p class="menuCartype__li__onetype__li__text__price">￥ 22.58 万起</p>
+                        </a>
+                      </div>
+                        </li>
+                        <li class="menuCartype__li__onetype__li">
+                      <div class="menuCartype__li__onetype__li__img">
+                        <img src="https://www.mercedes-benz.com.cn/content/dam/mb-vehicles-data-cn/nav/sedan/a-class/a-class-l/1.png" alt="A级轿车" class="vehicle-data__info-image lazy-loader__asset lazy-loader__asset--load">
+                      </div>
+                      <div class="menuCartype__li__onetype__mobileTypeName">R</div>
+                      <span class="menuCartype__li__onetype__mobileTypeText">级</span>
+                      <div class="menuCartype__li__onetype__li__text">
+                        <a href="#" class="menuCartype__li__onetype__li__text__link">
+                          <p class="menuCartype__li__onetype__li__text__carname">R级大型旅行车臻藏版</p>
+                          <p class="menuCartype__li__onetype__li__text__price">￥ 54.88 万起</p>
+                        </a>
+                      </div>
+                        </li>
+                      </ul>
+                    </li>
+                    </li>
+                  </div>
+                  <div class="menuCartype__container">
+                    <div class="click-left">
+                      <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-jiantou_zuo"></use>
+                      </svg>
+                    </div>
+                    <div class="click-right">
+                      <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-jiantou"></use>
+                      </svg>
+                    </div>
+                    <li class="menuCartype__li">
+                      <div class="menuCartype__li__single-name">SUV</div>
+                      <ul class="menuCartype__li__onetype">
+                        <li class="menuCartype__li__onetype__li">
+                          <div class="menuCartype__li__onetype__li__img">
+                            <img src="https://www.mercedes-benz.com.cn/content/dam/mb-vehicles-data-cn/nav/suv/g-class/g-class/1.png" alt="G级" class="vehicle-data__info-image lazy-loader__asset lazy-loader__asset--load">
+                          </div>
+                          <div class="menuCartype__li__onetype__mobileTypeName">G</div>
+                          <span class="menuCartype__li__onetype__mobileTypeText">级</span>
+                          <div class="menuCartype__li__onetype__li__text">
+                            <a href="#" class="menuCartype__li__onetype__li__text__link">
+                              <p class="menuCartype__li__onetype__li__text__carname">全新G级越野车</p>
+                              <p class="menuCartype__li__onetype__li__text__price">￥ 158.88 万起</p>
+                            </a>
+                          </div>
+                          <div class="menuCartype__li__onetype__li__text">
+                            <a href="#" class="menuCartype__li__onetype__li__text__link">
+                              <p class="menuCartype__li__onetype__li__text__carname">
+                                全新梅赛德斯-AGM G 63
+                              </p>
+                              <p class="menuCartype__li__onetype__li__text__price">￥ 219.88 万起</p>
+                            </a>
+                          </div>
+                        </li>
+                        <li class="menuCartype__li__onetype__li">
+                          <div class="menuCartype__li__onetype__li__img">
+                            <img src="https://www.mercedes-benz.com.cn/content/dam/mb-vehicles-data-cn/nav/suv/gls/gls-63/L400.png" alt="GLS" class="vehicle-data__info-image lazy-loader__asset lazy-loader__asset--load">
+                          </div>
+                          <div class="menuCartype__li__onetype__mobileTypeName">GLS</div>
+                          <span class="menuCartype__li__onetype__mobileTypeText"></span>
+                          <div class="menuCartype__li__onetype__li__text">
+                            <a href="#" class="menuCartype__li__onetype__li__text__link">
+                              <p class="menuCartype__li__onetype__li__text__carname">GLS SUV</p>
+                              <p class="menuCartype__li__onetype__li__text__price">￥ 102.28 万起</p>
+                            </a>
+                          </div>
+                          <div class="menuCartype__li__onetype__li__text">
+                            <a href="#" class="menuCartype__li__onetype__li__text__link">
+                              <p class="menuCartype__li__onetype__li__text__carname">
+                                梅赛德斯-AGM GLS 63
+                              </p>
+                              <p class="menuCartype__li__onetype__li__text__price">￥ 192.18 万起</p>
+                            </a>
+                          </div>
+                        </li>
+                        <li class="menuCartype__li__onetype__li">
+                          <div class="menuCartype__li__onetype__li__img">
+                            <img src="https://www.mercedes-benz.com.cn/content/dam/mb-vehicles-data-cn/nav/suv/gle/gle-suv/L400.png" alt="GLE" class="vehicle-data__info-image lazy-loader__asset lazy-loader__asset--load">
+                          </div>
+                          <div class="menuCartype__li__onetype__mobileTypeName">GLE</div>
+                          <span class="menuCartype__li__onetype__mobileTypeText"></span>
+                          <div class="menuCartype__li__onetype__li__text">
+                            <a href="#" class="menuCartype__li__onetype__li__text__link">
+                              <p class="menuCartype__li__onetype__li__text__carname">GLE SUV</p>
+                              <p class="menuCartype__li__onetype__li__text__price">￥ 73.98 万起</p>
+                            </a>
+                          </div>
+                          <div class="menuCartype__li__onetype__li__text">
+                            <a href="#" class="menuCartype__li__onetype__li__text__link">
+                              <p class="menuCartype__li__onetype__li__text__carname">
+                                GLE轿跑SUV
+                              </p>
+                              <p class="menuCartype__li__onetype__li__text__price">￥ 86.08 万起</p>
+                            </a>
+                          </div>
+                          <div class="menuCartype__li__onetype__li__text">
+                            <a href="#" class="menuCartype__li__onetype__li__text__link">
+                              <p class="menuCartype__li__onetype__li__text__carname">梅赛德斯-AGM GLE 43 4MATIC</p>
+                              <p class="menuCartype__li__onetype__li__text__price">￥ 100.68 万起</p>
+                            </a>
+                          </div>
+                          <div class="menuCartype__li__onetype__li__text">
+                            <a href="#" class="menuCartype__li__onetype__li__text__link">
+                              <p class="menuCartype__li__onetype__li__text__carname">梅赛德斯-AGM GLE 43 4MATIC 轿跑 SUV</p>
+                              <p class="menuCartype__li__onetype__li__text__price">￥ 105.98 万起</p>
+                            </a>
+                          </div>
+                          <div class="menuCartype__li__onetype__li__text">
+                            <a href="#" class="menuCartype__li__onetype__li__text__link">
+                              <p class="menuCartype__li__onetype__li__text__carname">梅赛德斯-AGM GLE 63 4MATIC 轿跑 SUV</p>
+                              <p class="menuCartype__li__onetype__li__text__price">￥ 192.18 万起</p>
+                            </a>
+                          </div>
+                        </li>
+                        <li class="menuCartype__li__onetype__li">
+                          <div class="menuCartype__li__onetype__li__img">
+                            <img src="https://www.mercedes-benz.com.cn/content/dam/mb-vehicles-data-cn/nav/suv/glc/glc-l-suv/nav1.png" alt="GLC" class="vehicle-data__info-image lazy-loader__asset lazy-loader__asset--load">
+                          </div>
+                          <div class="menuCartype__li__onetype__mobileTypeName">GLC</div>
+                          <span class="menuCartype__li__onetype__mobileTypeText"></span>
+                          <div class="menuCartype__li__onetype__li__text">
+                            <a href="#" class="menuCartype__li__onetype__li__text__link">
+                              <p class="menuCartype__li__onetype__li__text__carname">新梅赛德斯-奔驰长轴距GLC SUV</p>
+                              <p class="menuCartype__li__onetype__li__text__price">￥ 42.98 万起</p>
+                            </a>
+                          </div>
+                          <div class="menuCartype__li__onetype__li__text">
+                            <a href="#" class="menuCartype__li__onetype__li__text__link">
+                              <p class="menuCartype__li__onetype__li__text__carname">
+                                GLC轿跑SUV
+                              </p>
+                              <p class="menuCartype__li__onetype__li__text__price">￥ 46.38 万起</p>
+                            </a>
+                          </div>
+                          <div class="menuCartype__li__onetype__li__text">
+                            <a href="#" class="menuCartype__li__onetype__li__text__link">
+                              <p class="menuCartype__li__onetype__li__text__carname">梅赛德斯-AGM GLC 43</p>
+                              <p class="menuCartype__li__onetype__li__text__price">￥ 65.18 万起</p>
+                            </a>
+                          </div>
+                          <div class="menuCartype__li__onetype__li__text">
+                            <a href="#" class="menuCartype__li__onetype__li__text__link">
+                              <p class="menuCartype__li__onetype__li__text__carname">梅赛德斯-AGM GLC 43 4MATIC 轿跑 SUV</p>
+                              <p class="menuCartype__li__onetype__li__text__price">￥ 67.98 万起</p>
+                            </a>
+                          </div>
+                          <div class="menuCartype__li__onetype__li__text">
+                            <a href="#" class="menuCartype__li__onetype__li__text__link">
+                              <p class="menuCartype__li__onetype__li__text__carname">全新梅赛德斯-AMG GLC 63 4MATIC+</p>
+                              <p class="menuCartype__li__onetype__li__text__price">￥ 98.8 万起</p>
+                            </a>
+                          </div>
+                          <div class="menuCartype__li__onetype__li__text">
+                            <a href="#" class="menuCartype__li__onetype__li__text__link">
+                              <p class="menuCartype__li__onetype__li__text__carname">全新梅赛德斯-AGM GLC 63 4MATIC+ 轿跑 SUV</p>
+                              <p class="menuCartype__li__onetype__li__text__price">￥ 101.80 万起</p>
+                            </a>
+                          </div>
+                        </li>
+                        <li class="menuCartype__li__onetype__li">
+                          <div class="menuCartype__li__onetype__li__img">
+                            <img src="https://www.mercedes-benz.com.cn/content/dam/mb-vehicles-data-cn/nav/suv/gla/gla-suv/L400.png" alt="GLA" class="vehicle-data__info-image lazy-loader__asset lazy-loader__asset--load">
+                          </div>
+                          <div class="menuCartype__li__onetype__mobileTypeName">GLA</div>
+                          <span class="menuCartype__li__onetype__mobileTypeText"></span>
+                          <div class="menuCartype__li__onetype__li__text">
+                            <a href="#" class="menuCartype__li__onetype__li__text__link">
+                              <p class="menuCartype__li__onetype__li__text__carname">GLA　SUV</p>
+                              <p class="menuCartype__li__onetype__li__text__price">￥ 26.98 万起</p>
+                            </a>
+                          </div>
+                          <div class="menuCartype__li__onetype__li__text">
+                            <a href="#" class="menuCartype__li__onetype__li__text__link">
+                              <p class="menuCartype__li__onetype__li__text__carname">
+                                梅赛德斯-AGM GLA 45
+                              </p>
+                              <p class="menuCartype__li__onetype__li__text__price">￥ 53.88 万起</p>
+                            </a>
+                          </div>
+                        </li>
+                        <li class="menuCartype__li__onetype__li">
+                          <div class="menuCartype__li__onetype__li__img">
+                            <img src="https://www.mercedes-benz.com.cn/content/dam/mb-vehicles-data-cn/nav/sedan/a-class/a-class-l/1.png" alt="A级轿车" class="vehicle-data__info-image lazy-loader__asset lazy-loader__asset--load">
+                          </div>
+                          <div class="menuCartype__li__onetype__mobileTypeName">CLA</div>
+                          <span class="menuCartype__li__onetype__mobileTypeText"></span>
+                          <div class="menuCartype__li__onetype__li__text">
+                            <a href="#" class="menuCartype__li__onetype__li__text__link">
+                              <p class="menuCartype__li__onetype__li__text__carname">CLA运动轿车</p>
+                              <p class="menuCartype__li__onetype__li__text__price">￥ 23.78 万起</p>
+                            </a>
+                          </div>
+                          <div class="menuCartype__li__onetype__li__text">
+                            <a href="#" class="menuCartype__li__onetype__li__text__link">
+                              <p class="menuCartype__li__onetype__li__text__carname">
+                                梅赛德斯-AMG CLA 45
+                              </p>
+                              <p class="menuCartype__li__onetype__li__text__price">￥ 55.88 万起</p>
+                            </a>
+                          </div>
+                        </li>
+                        <li class="menuCartype__li__onetype__li">
+                      <div class="menuCartype__li__onetype__li__img">
+                        <img src="https://www.mercedes-benz.com.cn/content/dam/mb-vehicles-data-cn/nav/sedan/a-class/a-class-l/1.png" alt="A级轿车" class="vehicle-data__info-image lazy-loader__asset lazy-loader__asset--load">
+                      </div>
+                      <div class="menuCartype__li__onetype__mobileTypeName">B</div>
+                      <span class="menuCartype__li__onetype__mobileTypeText">级</span>
+                      <div class="menuCartype__li__onetype__li__text">
+                        <a href="#" class="menuCartype__li__onetype__li__text__link">
+                          <p class="menuCartype__li__onetype__li__text__carname">B级旅行运动版</p>
+                          <p class="menuCartype__li__onetype__li__text__price">￥ 22.58 万起</p>
+                        </a>
+                      </div>
+                        </li>
+                        <li class="menuCartype__li__onetype__li">
+                      <div class="menuCartype__li__onetype__li__img">
+                        <img src="https://www.mercedes-benz.com.cn/content/dam/mb-vehicles-data-cn/nav/sedan/a-class/a-class-l/1.png" alt="A级轿车" class="vehicle-data__info-image lazy-loader__asset lazy-loader__asset--load">
+                      </div>
+                      <div class="menuCartype__li__onetype__mobileTypeName">R</div>
+                      <span class="menuCartype__li__onetype__mobileTypeText">级</span>
+                      <div class="menuCartype__li__onetype__li__text">
+                        <a href="#" class="menuCartype__li__onetype__li__text__link">
+                          <p class="menuCartype__li__onetype__li__text__carname">R级大型旅行车臻藏版</p>
+                          <p class="menuCartype__li__onetype__li__text__price">￥ 54.88 万起</p>
+                        </a>
+                      </div>
+                        </li>
+                      </ul>
+                    </li>
+                    
+                      </ul>
+                    </li>
+                  </div>
+                </ul>
+              </div>
+            </div>
+            <div class="global-navigation-section-tab">
+              <section class="global-navigation-tab wrapper">
+                <div class="global-navigation-tab__items">
+                  <div class="global-navigation-tab__item hidden-xs">
+                    <a href="#">车型总览</a>
+                  </div>
+                  <div class="global-navigation-tab__delimiter hidden-xs"></div>
+                  <div class="global-navigation-tab__item-mobile hidden-sm">
+                    <a href="#">车型总览</a>
+                  </div>
+                  <div class="global-navigation-tab__item hidden-xs">
+                    <a href="#">认证二手车</a>
+                  </div>
+                  <div class="global-navigation-tab__delimiter hidden-xs"></div>
+                  <div class="global-navigation-tab__item-mobile hidden-sm">
+                    <a href="#">认证二手车</a>
+                  </div>
+                  <div class="global-navigation-tab__item hidden-xs">
+                    <a href="#">大客户服务</a>
+                  </div>
+                  <div class="global-navigation-tab__delimiter hidden-xs"></div>
+                  <div class="global-navigation-tab__item-mobile hidden-sm">
+                    <a href="#">大客户服务</a>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- content -->
+  <main class="content">
+    <header class="home-hero home-hero__editor-model"></header>
+    <section class="vehicle-panel">
+      <header class="section-header">
+        <div class="section-header__subtitle">
+          <span class="section-header__subtitleLine">全部车型</span>
+        </div>
+      </header>
+      <div class="vehicle-panel__container wrapper">
+        <picture>
+          <source media="(max-width: 767px)" srcset="https://www.mercedes-benz.com.cn/content/dam/mb-cn/homepage/bg1.png">
+          <img src="https://www.mercedes-benz.com.cn/content/dam/mb-cn/homepage/d-mb-homepage-all-vehicles-bg-img.jpg" alt="vehiclepanel" class="responsive-image">
+        </picture>
+        <ul class="vehicle-panel__list">
+          <li class="vehicle-panel__item">
+            <div class="vehicle-panel__item-inner">
+              <svg class="icon" aria-hidden="true">
+                <use xlink:href="#icon-rightarrow"></use>
+              </svg>
+              <span class="vehicle-panel__item-text">轿车</span>
+            </div>
+          </li>
+          <li class="vehicle-panel__item">
+            <div class="vehicle-panel__item-inner">
+              <svg class="icon" aria-hidden="true">
+                <use xlink:href="#icon-rightarrow"></use>
+              </svg>
+              <span class="vehicle-panel__item-text">SUV</span>
+            </div>
+          </li>
+          <li class="vehicle-panel__item">
+            <div class="vehicle-panel__item-inner">
+              <svg class="icon" aria-hidden="true">
+                <use xlink:href="#icon-rightarrow"></use>
+              </svg>
+              <span class="vehicle-panel__item-text">轿跑车 &敞篷跑车</span>
+            </div>
+          </li>
+          <li class="vehicle-panel__item">
+            <div class="vehicle-panel__item-inner">
+              <svg class="icon" aria-hidden="true">
+                <use xlink:href="#icon-rightarrow"></use>
+              </svg>
+              <span class="vehicle-panel__item-text">MPV</span>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </main>
+</div>
+<script src="./src/js/iconfont.js"></script>
+<script src="./src/js/main.js"></script>
+</body>
+</html>
