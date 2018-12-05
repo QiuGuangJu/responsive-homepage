@@ -1,0 +1,1374 @@
+html {
+  -webkit-box-sizing:border-box;
+  -moz-box-sizing:border-box;
+  box-sizing:border-box
+}
+*,*::after,*::before {
+  -webkit-box-sizing:inherit;
+  -moz-box-sizing:inherit;
+  box-sizing:inherit
+}
+
+
+html,body,.grid-debugger,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video {
+  margin:0;
+  padding:0;
+  border:0;
+  font-size:100%;
+  vertical-align:baseline
+}
+a {
+  text-decoration: none;
+}
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section,main {
+  display:block
+}
+body,.grid-debugger {
+  line-height:1;
+  -ms-overflow-x:hidden
+}
+body[data-variant="ondisplay"],.grid-debugger[data-variant="ondisplay"] {
+  -webkit-user-select:none;
+  -moz-user-select:none;
+  -ms-user-select:none;
+  user-select:none
+}
+ol,ul {
+  list-style:none
+}
+blockquote,q {
+  quotes:none
+}
+blockquote:before,blockquote:after,q:before,q:after {
+  content:'';
+  content:none
+}
+table {
+  border-collapse:collapse;
+  border-spacing:0
+}
+button {
+  border:none;
+  outline:none;
+  padding:0;
+  margin:0;
+  background:none;
+  line-height:normal
+}
+dialog {
+  background:white;
+  border:solid;
+  color:black;
+  display:block;
+  height:-moz-fit-content;
+  height:-webkit-fit-content;
+  height:fit-content;
+  left:0;
+  right:0;
+  margin:auto;
+  padding:1em;
+  position:absolute;
+  width:-moz-fit-content;
+  width:-webkit-fit-content;
+  width:fit-content
+}
+img {
+  vertical-align:bottom
+}
+
+.hidden {
+  display: none !important;
+}
+
+.lazy-loader {
+  display: block;
+}
+
+/* 页面样式 */
+
+.menu-toggle {
+  background-color: #222;
+  height: 80px;
+  position: relative;
+}
+
+
+.icon {
+       width: 20px;
+       height: 20px;
+       vertical-align: -0.15em;
+       fill: currentColor;
+       overflow: hidden;
+ }
+
+ .icon:hover {
+  color: #00ADEF;
+ }
+
+ .text-btn:hover {
+  color: #00ADEF !important;
+ }
+
+ .data-menu-item-content__search-container {
+  display: none;
+ }
+
+ .data-menu-item-content__sub {
+  height: 0;
+  overflow: hidden;
+ }
+
+
+ .menuFadeDown {
+  height: auto;
+ }
+
+.data-menu-item-content__sub__mobile__back {
+  display: none;
+}
+
+.menu-car-list-mobile {
+  display: block;
+  padding: 20px 0;
+}
+
+.menu-car-list-mobile__li {
+  font-weight: normal;
+  display: inline-block;
+  margin-right: 50px;
+  cursor: pointer;
+  font-size: 16px;
+  color: #666;
+  line-height: 29px;
+}
+
+.menu-car-list-mobile__li--active {
+  border-bottom: 3px solid #00ADEF;
+}
+
+.appear {
+  display: block !important;
+}
+
+.disappear {
+  display: none !important;
+}
+
+.menuCartype__container {
+  position: relative;
+  display: none;
+}
+
+.click-left {
+  position: absolute;
+  cursor: pointer;
+  width: 30px;
+  height: 150px;
+  left: -30px;
+  box-shadow: 4px 0 5px -3px rgba(0, 0, 0, .1);
+}
+
+.click-right {
+  position: absolute;
+  cursor: pointer;
+  width: 30px;
+  height: 150px;
+  right: -30px;
+  box-shadow: -4px 0 5px -3px rgba(0, 0, 0, .1);
+}
+
+.click-left .icon,
+.click-right .icon {
+  color: #00ADEF;
+  height: 100%;
+}
+
+.menuCartype__li {
+  display: none;
+  position: relative;
+  overflow: hidden;
+}
+
+.menuCartype__li__single-name {
+  display: none;
+}
+
+.menuCartype__li__onetype {
+  padding-bottom: 60px;
+  white-space: nowrap;
+  overflow: hidden;
+  position: relative;
+}
+
+.menuCartype__li__onetype__li__img {
+  height: 87px;
+  overflow: hidden;
+}
+
+.menuCartype__li__onetype__li__img img {
+  width: 200px;
+}
+
+.lazy-loader__asset {
+  opacity: 0;
+  transition: opacity ease 3s;
+}
+
+.lazy-loader__asset--loaded {
+  opacity: 1;
+}
+
+.menuCartype__li__onetype__li {
+  display: inline-block;
+  vertical-align: top; 
+  width: 224px;
+  margin-right: 11px;
+  position: relative;
+}
+
+.menuCartype__li__onetype__li::before {
+  position: absolute;
+  width: 21px;
+  height: 2px;
+  display: block;
+  content: "";
+  top: 157px;
+  z-index: 4;
+  background: #444;
+}
+
+.menuCartype__li__onetype__mobileTypeName {
+  display: inline-block;
+  font-weight: normal;
+  overflow: hidden;
+  white-space: nowrap;
+  padding-top: 20px;
+  color: #666;
+}
+
+.menuCartype__li__onetype__mobileTypeText {
+  font-size: 14px;
+  top: -5px;
+  position: relative;
+  columns: #666;
+}
+
+.menuCartype__li__onetype__li__text {
+  padding-top: 26px;
+}
+
+.menuCartype__li__onetype__li__text__link {
+  color: #010101;
+}
+
+
+.menuCartype__li__onetype__li__text__link:hover p {
+  color: #00ADEF;
+}
+
+.menuCartype__li__onetype__li__text__carname {
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 500;
+  color: #333;
+}
+
+.menuCartype__li__onetype__li__text__price {
+  font-size: 12px;
+  font-weight: normal;
+  color: #666;
+}
+
+.global-navigation-tab {
+  color: #333;
+}
+
+.wrapper::after {
+  clear: both;
+  content: "";
+  display: block;
+}
+
+.global-navigation-tab__item {
+  font-weight: 600;
+  display: inline;
+  font-size: 14px;
+  cursor: pointer;
+  color: #666;
+}
+
+.global-navigation-tab__item:first-of-type {
+  margin-left: 0;
+}
+
+.global-navigation-tab__item a {
+  color: #666;
+}
+
+.global-navigation-tab__delimiter {
+  display: inline-block;
+  border-left: solid 1px #999;
+  height: 15px;
+}
+
+.global-navigation-tab__item-mobile {
+  border-bottom: 1px solid #ccc;
+  padding: 5px 0;
+  font-weight: normal;
+  font-size: 13px;
+  font-weight: bold;
+  position: relative;
+}
+
+.data-menu-item-content-0 .global-navigation-tab__items .global-navigtion-tab__item-mobile {
+  border: none;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+/* content */
+
+
+/* vehicle-panel */
+.vehicle-panel {
+  margin-top: 60px;
+  margin-bottom: 10px;
+}
+
+.section-header {
+  overflow: hidden;
+}
+
+.vehicle-panel__container {
+  position: relative;
+}
+
+.section-header__subtitle {
+  color: #666;
+  position: relative;
+  overflow: hidden;
+  max-width: 940px;
+  text-align: center;
+  margin: 40px auto 12px;
+}
+
+.section-header__subtitle span {
+  display: inline-block;
+  padding: 0 14px;
+  position: relative;
+  z-index: 2;
+}
+
+.section-header__subtitleLine::before {
+  content: "";
+  position: absolute;
+  top: 25px;
+  left: -650px;
+  width: 650px;
+  height: 1px;
+  background-color: #e1e1e1;
+  z-index: 1;
+}
+
+.section-header__subtitleLine::after {
+  content: "";
+  position: absolute;
+  top: 25px;
+  width: 650px;
+  height: 1px;
+  right: -650px;
+  background-color: #e1e1e1;
+  z-index: 1;
+}
+
+.vehicle-panel__container {
+  position: relative;
+}
+
+.responsive-image {
+  width: 100%;
+  vertical-align: top;
+}
+
+.vehicle-panel__list {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.vehicle-panel__item {
+  cursor: pointer;
+  position: relative;
+  width: 25%;
+  float: left;
+  border-right: 1px solid #fff;
+  height: 100%;
+  
+}
+
+
+
+
+
+.vehicle-panel__item-inner .icon {
+  display: block;
+  margin: 0 auto;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+
+
+
+.menu-toggle .menu-toggle__parent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  padding: 0 20px;
+}
+
+.menu-toggle .menu-toggle__parent .menu-toggle__logo-img {
+  width: 162px;
+  height: 40px;
+}
+
+.menu-toggle__cta {
+  color: #f6f6f6;
+}
+
+.menu-toggle__cta .menu-toggle__hamburger {
+  display: inline-block;
+}
+
+.menu-toggle__hamburger-line {
+  position: relative;
+  width: 20px;
+  height: 2px;
+  background-color: #c1f0f1;
+  display: block;
+  transition: all .3s ease-in-out;
+}
+
+.menu-toggle__hamburger-line:nth-of-type(2) {
+  margin: 3px auto;
+}
+
+/* top-nav */
+.wrapper {
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  margin: 0 20px;
+}
+
+/* large columns */
+.promo-panel {
+  margin-bottom: 5px;
+  position: relative;
+}
+
+.promo-panel__item {
+  width: 100%;
+  float: left;
+}
+
+.promo-panel__item:first-of-type {
+  margin-left: 0px;
+}
+
+.promo-panel-item {
+  position: relative;
+  color: #333;
+  cursor: pointer;
+}
+
+.promo-panel-item__link {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 0;
+  z-index: 2;
+  background-color: #fff;
+  opacity: 0;
+}
+
+.promo-panel-item__cover {
+  background-color: rgba(0, 0, 0, .5);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  opacity: 0;
+  transition: all .3s ease-in-out;
+}
+
+.promo-panel-item:hover .promo-panel-item__cover {
+  opacity: 1;
+}
+
+.promo-panel-item:hover .home-article-group__article {
+  opacity: 1;
+  display: block;
+}
+
+.promo-panel-item .home-article-group {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding-left: 40px;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.home-article__title {
+  transform: scaleX(0.7);
+  transform-origin: left;
+  width: 142.857143%;
+  margin-bottom: 10px;
+  font-weight: normal;
+}
+
+.promo-panel-item .home-article__title {
+  position: relative;
+  color: #fff;
+  z-index: 1;
+}
+
+.promo-panel-item .home-article-group__article {
+  position: relative;
+  padding: 0;
+  max-width: 440px;
+  width: 100%;
+  display: none;
+  opacity: 0;
+}
+
+.promo-panel-item .home-article-group__article .home-article__info {
+  margin-bottom: 0;
+  color: #fff;
+}
+
+.home-article__info {
+  font: normal 400 16px/normal "PingFang SC","Hiragino Sans GB","Noto Sans CJK SC","Source Han Sans SC","Microsoft YaHei","SimHei",Helvetica,Arial,serif;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+}
+
+.promo-panel-item .home-article-group__article .text-btn {
+  font: normal 400 13px/18px "PingFang SC","Hiragino Sans GB","Noto Sans CJK SC","Source Han Sans SC","Microsoft YaHei","SimHei",Helvetica,Arial,serif;
+  color: #fff;
+  font-weight: 500;
+  padding-bottom: 4px;
+  padding-left: 20px;
+  border-bottom: none;
+  display: inline-block;
+  margin-top: 26px;
+  position: relative;
+  z-index: 2;
+  font-size: 14px;
+}
+
+.promo-panel-item .home-article-group__article .text-btn .icon {
+  position: absolute;
+  left: 0;
+  top: 0;
+
+}
+
+/* promo-panel medium & small */
+.promo-panel__list--2>li:first-of-type {
+  margin-right: 10px;
+}
+
+/* promo-panel full-width-panel */
+.full-width-panel {
+  margin-top: 70px;
+  margin-bottom: 0px;
+  position: relative;
+}
+
+.full-width-panel__wrapper {
+  position: absolute;
+  top: 0px;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 100%;
+}
+
+.full-width-panel__article {
+  width: 300px;
+  padding-left: 36px;
+  padding-right: 36px;
+  background: rgba(255,255,255,.9);
+  position: absolute;
+  top: 50%;
+  left: 0px;
+  transform: translateY(-50%);
+}
+
+.home-article {
+  display: inline-block;
+  padding: 20px;
+  color: #333;
+}
+
+.full-width-panel__article .text-btn {
+  font-size: 14px;
+}
+
+.full-width-panel__article .text-btn {
+  font: normal 400 13px/18px "PingFang SC","Hiragino Sans GB","Noto Sans CJK SC","Source Han Sans SC","Microsoft YaHei","SimHei",Helvetica,Arial,serif;
+  color: #333;
+  font-weight: 500;
+  padding-bottom: 4px;
+  border-bottom: none;  
+}
+
+/* social-share */
+.social-share {
+  font: normal 500 16px/2 "PingFang SC","Hiragino Sans GB","Noto Sans CJK SC","Source Han Sans SC","Microsoft YaHei","SimHei",Helvetica,Arial,serif;
+  text-align: right;
+  padding-top: 40px;
+  padding-bottom: 100px;
+  background: transparent;
+}
+
+.social-share__icon .icon {
+  width: 32px;
+  height: 32px;
+}
+
+.social-share__icon .icon:hover {
+  color: #333;
+}
+
+.social-share__icon {
+  margin-left: 20px;
+  display: inline-block;
+  vertical-align: top;
+  line-height: 32px;
+  color: #333;
+}
+
+/* footer */
+.footer {
+  z-index: 500px;
+  position: relative;
+  background-color: #f1f1f1;
+  padding-top: 20px;
+  overflow: hidden;
+}
+
+.footer__accordion-container,
+.footer .column-link-list {
+  display: flex;
+  flex-wrap: wrap;
+  flex: 1;
+}
+
+.footer__accordion-item {
+  width: 100%;
+}
+
+.footer__accordion-item:first-child .accordion__title {
+  border-top: none;
+}
+
+.footer__accordion-item-heading {
+  font: normal 400 14px/3.42857 "PingFang SC","Hiragino Sans GB","Noto Sans CJK SC","Source Han Sans SC","Microsoft YaHei","SimHei",Helvetica,Arial,serif;
+
+}
+
+.column-link-list__link-container {
+  color: #222;
+}
+
+.column-link-list__link-container li {
+  font: normal 400 14px/3.42857 "Arial",sans-serif
+}
+
+.accordion--footer .accordion__pane ul li a {
+  font: normal 400 14px/3.42857 "PingFang SC","Hiragino Sans GB","Noto Sans CJK SC","Source Han Sans SC","Microsoft YaHei","SimHei",Helvetica,Arial,serif;
+}
+
+.column-link-list__link-container a {
+  display: block;
+  color: #333;
+}
+
+.footer__accordion-item.stayl-connected__other-sites {
+  margin-right: 0;
+}
+
+.stay-connected__qr-container {
+  position: relative;
+  height: 44px;
+  transition: height .5s;
+}
+
+.stay-connected__other-link {
+  color: #666;
+  font-size: 18px;
+}
+
+/* media */
+@media screen and (min-width: 768px) {
+  .menu-toggle {
+    display: none;
+  }
+
+  .vehicle-panel__item:hover {
+    background: rgba(0,0,0,.3);
+  }
+
+  .vehicle-panel__item:hover .vehicle-panel__item-inner {
+    transform: translate(-50%, -50px);
+  }
+
+  .vehicle-panel__item:hover .vehicle-panel__item-inner .icon {
+      background: #fff;
+      color: #111;
+  }
+
+  .top-nav {
+    background-color: #222;
+    height: 108px;
+    width: 100%;
+    position: relative;
+  }
+  
+  .top-nav__level {
+    height: 100%;
+    position: relative;
+    visibility: visible;
+    background-color: transparent;
+    display: table;
+  }
+
+  .wrapper {
+    width: calc(700/768 * 100%);
+    margin: 0 auto;
+  }
+  
+  .sub-nav__level {
+    height: 108px;
+    display: inline-table;
+    line-height: 0;
+  }
+  
+  .sub-nav__level--top {
+    height: auto;
+    position: absolute;
+    top: 26px;
+    right: 0;
+    font-size: 12px;
+  }
+
+  .top-nav__item {
+    list-style: none;
+    display: inline-block;
+    border: none;
+    height: 100%;
+    vertical-align: top;
+    line-height: 40px;
+  }
+
+  .top-nav__item--dealer-action {
+    margin-left: 8px;
+  }
+
+  .top-nav__item--dealer-action--separator {
+    height: 16px;
+    opacity: .5;
+    border-left: solid 2px #fff;
+  }
+
+  .top-nav__link {
+    display: block;
+    font: normal 400 14px/1.5 "Arial",sans-serif;
+    padding-right: 20px;
+  }
+
+  .top-nav__item .top-nav__link {
+    color: #fff;
+    font-weight: 400;
+    height: 100%;
+    display: table;
+    text-shadow: 1px 1px 1px #000;
+  }
+
+  .top-nav__item--dealer-action .top-nav__link {
+    padding: 0;
+  }
+
+  .top-nav__item--dealer-action .top-nav__link .top-nav__label {
+    font-size: 12px;
+  }
+
+  .top-nav__item .top-nav__label {
+    display: table-cell;
+    vertical-align: bottom;
+  }
+
+  .sub-nav__level--user {
+    font-family: "PingFang SC","Hiragino Sans GB",Helvetica,Arial;
+    color: #fff;
+    cursor: pointer;
+  }
+
+  .sub-nav__level--top-dropdown {
+    width: 140px;
+    height: auto;
+    position: absolute;
+    top: 40px;
+    border-radius: 2px;
+    right: 0;
+    color: #000;
+    background: #fff;
+    padding: 15px;
+    font-family: "PingFang SC",Helvetica,Arail;
+    z-index: 999;
+  }
+
+  .sub-nav__level--top-dropdown li:nth-of-type(1) {
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 1.2px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #e1e1e1;
+  }
+
+  .sub-nav__level--top-dropdown li {
+    line-height: 1;
+  }
+
+  .sub-nav__level--top-dorpdown li:nth-of-type(2) {
+    margin-top: 15px;
+    margin-bottom: 10px;
+  }
+
+  .sub-nav__level--top-dropdown li:nth-of-type(3) {
+    margin-bottom: 15px;
+  }
+
+  .sub-nav__level--top-dropdown li:nth-of-type(4) {
+    padding-top: 15px;
+    border-top: 1px solid #e1e1e1;
+  }
+
+  .sub-nav__level--left {
+    float: left;
+    display: block;
+    margin-right: 0;
+    height: 64px;
+    margin-top: 22px;
+    font: normal 400 14px/3.42857 "PingFang SC",Helvetica,Arial,serif;
+    width: auto;
+  }
+  .top-nav__item .logo__container {
+    line-height: 0;
+    height: 100%;
+    display: table-cell;
+    vertical-align: bottom;
+    padding-bottom: 3px;
+  }
+
+  .top-nav__item .logo__container .mercedes-benz-logo {
+    width: 259px;
+    height: 64px;
+  }
+  
+  .top-nav__item .top-nav__link_parent {
+    position: relative;
+    margin-top: 40px;
+    height: 20px;
+  }
+
+  .top-nav__item .top-nav__label {
+    font: normal 400 14px/3.42857 "PingFang SC","Hiragino Sans GB","Noto Sans CJK SC","Source Han Sans SC","Microsoft YaHei","SimHei",Helvetica,Arial,serif;
+    line-height: normal;
+  }
+
+  .sub-nav__level--right {
+    float: right;
+    height: 40px;
+    margin-top: 42px;
+    text-align: right;
+    width: auto;
+  }
+  .sub-nav__level--right:last-child {
+    margin-right: 0;
+  }
+
+  .top-nav__item--company-title .top-nav__link {
+    padding-left: 0;
+  }
+
+  .sub-nav__level--right .top-nav__item .top-nav__link {
+    padding: 0
+  }
+
+  .search-nav--show {
+    display: block !important;
+  }
+
+  .search-nav {
+    display: none;
+    background-color: #222;
+    height: 60px;
+    vertical-align: top;
+    text-align: right;
+    width: 100%;
+    position: relative;
+    font-size: 0;
+  }
+
+  .search-nav__input {
+    position: relative;
+    background-color: rgba(0,0,0,0);
+    width: 215px;
+    height: 36px;
+    border-radius: 1px;
+    padding-left: 34px;
+    margin-top: 13px;
+    color: #fff;
+    font: normal 500 14px/36px "PingFang SC","Hiragino Sans GB","Noto Sans CJK SC","Source Han Sans SC","Microsoft YaHei","SimHei",Helvetica,Arial,serif;
+  }
+
+  .search-nav__btn {
+    position: relative;
+    display: inline-block;
+    width: 36px;
+    height: 36px;
+    border-radius: 1px;
+    vertical-align: top;
+    margin-top: 13px;
+    margin-left: 11px;
+    text-align: center;
+    background-color: #666;
+  }
+  
+  .search-nav__btn .icon {
+    color: #fff;
+  }
+  
+  .search-nav__btn .icon-search1 {
+    width: 60%;
+    height: 100%;
+    position: absolute;
+    margin-left: -220px;
+  }
+
+  .search-nav__btn .icon-jiantouarrow484 {
+    width: 80%;
+    height: 100%;
+  }
+
+  .hidden-sm {
+    display: none !important;
+  }
+
+  .global-navigation__section-heading{
+    font: normal 400 36px/50px "Simsun",serif;
+    color: #333;
+    margin-top: 40px;
+    transform: scaleX(.7);
+    transform-origin: left;
+    width: 142.857143%;
+  }
+
+  .menuCartype__li__onetype__mobileTypeName {
+    font: normal 400 36px/1 "SimSun",serif;
+    transform: scaleX(.7);
+    transform-origin: left;
+    width: 142.857143%;
+    width: auto;
+  }
+
+  .menuCartype__li__onetype__li__text__carname {
+    width: 200px;
+    white-space: normal;
+    word-wrap: break-word;
+    word-break: break-word;
+  }
+
+  .top-nav__item .top-nav__link--active {
+    position: relative;
+    color: #00ADEF;
+  }
+
+  .top-nav__item .top-nav__dropdown::before {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    content: " ";
+    width: 14px;
+    height: 14px;
+    left: 50%;
+    top: 39px;
+    margin-left: -14px;
+    transform: rotate(45deg);
+  }
+  
+  .top-nav__item .top-nav__link--active::before {
+    display: block !important;
+  }
+
+  .global-navigation-tab {
+    border-top: 1px solid #ccc;
+    font: normal 500 36px/50px "PingFang SC","Hiragino Sans GB","Noto Sans CJK SC","Source Han Sans SC","Microsoft YaHei","SimHei",Helvetica,Arial,serif;
+    font-weight: normal;
+  }
+
+  .global-navigation-tab__item {
+    margin-left: 20px;
+    margin-right: 20px;
+    font-size: 16px;
+  }
+
+  .vehicle-panel .section-header__subtitle {
+    margin-top: 0;
+    margin-bottom: 41px;
+  }
+
+  .section-header__subtitle span {
+    font: normal 400 36px/50px "SimSun",serif;
+    transform: scaleX(.7);
+    transform-origin: center;
+    width: 142.857143%;
+    margin: auto;
+    width: auto;
+  }
+
+  .vehicle-panel__item-inner {
+    position: absolute;
+    top: calc(100% - 140px);
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 95px;
+    text-align: center;
+    font: normal 400 20px/28px "PingFang SC","Hiragino Sans GB","Noto Sans CJK SC","Source Han Sans SC","Microsoft YaHei","SimHei",Helvetica,Arial,serif;
+    font-weight: 600;
+    text-shadow: 0 2px 10px rgba(0,0,0,.5);
+    color: #fff;
+    text-align: center;
+    transform-origin: center center;
+  }
+
+  .home-article__title {
+    font: normal 400 36px/1 "SimSun",sans-serif;
+  }
+  .promo-panel__item--medium {
+    width: 460px;
+  }
+  .promo-panel__item--small {
+    width: 230px;
+  }
+  .full-width-panel__article .home-article__title {
+    font: normal 400 36px/50px "SimSun",sans-serif;
+  }
+
+  .full-width-panel .home-article__info {
+    font-weight: 300;
+  }
+  .footer {
+    z-index: 499;
+    padding-top: 30px;
+  }
+
+  .footer .wraper {
+    margin: 0 auto;
+  }
+
+  .footer__accordion-item {
+    margin-right: 10px;
+    width: calc(100%/4 - 40px/4);
+    padding-bottom: 15px;
+  }
+
+  .footer__accordion-item-heading {
+    font: normal 700 18px/2.66667 "PingFang SC","Hiragino Sans GB","Noto Sans CJK SC","Source Han Sans SC","Microsoft YaHei","SimHei",Helvetica,Arial,serif;
+    font-weight: normal;
+  }
+
+  .column-link-list__link-container li {
+    font: normal 400 14px/3.42857 "Arial",sans-serif;
+  }
+
+  .accordion__button {
+    font: inherit;
+  }
+
+  .accordion__button .icon {
+    display: none;
+  }
+
+  .footer__accordion-item.stay-connected__other-sites {
+    border-top: 1px solid #ccc;
+    padding: 20px 0;
+    width: 100%
+  }
+  .stay-connected__other-sites-container {
+    height: 19px;
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    padding-right: 10%;
+  }
+
+  .footer .stay-connected__other-link {
+    display: flex;
+    align-items: center;
+    font: normal 400 16px/1 "PingFang SC","Hiragino Sans GB","Noto Sans CJK SC","Source Han Sans SC","Microsoft YaHei","SimHei",Helvetica,Arial,serif;
+    color: #666;
+    line-height: normal;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .page .header .top-nav {
+    display: none; 
+  }
+
+  .vehicle-panel .section-header__subtitle {
+    letter-spacing: .6px;
+  }
+  
+ .section-header__subtitle span {
+    font: normal 400 24px/28px "PingFang SC","Hiragino Sans GB","Noto Sans CJK SC","Source Han Sans SC","Microsoft YaHei","SimHei",Helvetica,Arial,serif;
+
+  }
+
+  .section-header__subtitle span {
+    transform: scaleX(.7);
+    width: 142.857143%;
+    transform-origin: center;
+    width: auto;
+  }
+
+  .vehicle-panel__list .vehicle-panel__item {
+    position: relative;
+    width: 100%;
+    height: 25%;
+    border-right: none;
+    border-bottom: 1px solid #fff;
+  }
+
+  .section-header__subtitleLine::before,
+  .section-header__subtitleLine::after {
+    top: 14px;
+  }
+
+  .vehicle-panel__item .vehicle-panel__item-inner {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    font: normal 400 20px/28px "PingFang SC","Hiragino Sans GB","Noto Sans CJK SC","Source Han Sans SC","Microsoft YaHei","SimHei",Helvetica,Arial,serif;
+    color: #fff;
+    padding: 10px;
+  }
+
+  .vehicle-panel__item-text {
+    position: absolute;
+    left: 20px;
+    right: 27px;
+    top: 50%;
+    transform: translateY(-50%);
+    font: normal 400 16px/25px "PingFang SC","Hiragino Sans GB","Noto Sans CJK SC","Source Han Sans SC","Microsoft YaHei","SimHei",Helvetica,Arial,serif;
+    max-width: unset;
+    text-align: left;
+    font-weight: 600;
+    text-shadow: 0 2px 5px rgba(0,0,0,.36);
+  }
+  
+  .vehicle-panel__item .vehicle-panel__item-inner .icon {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .search-nav {
+    display: none;
+  }
+
+  .data-menu-item-content__sub {
+    height: 0;
+  }
+  
+
+  .promo-panel {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .promo-panel__item {
+    float: none;
+    margin: 20px 0;
+  }
+
+  .promo-panel-item__cover {
+    background-color: rgba(0,0,0,.1);
+    opacity: 1;
+  }
+
+  .promo-panel-item .home-article-group {
+    padding-left: 0;
+  }
+
+  .promo-panel-item .home-article__title {
+    margin-left: 16px;
+    font-size: 22px;
+  }
+
+  .promo-panel-item .home-article-group__article {
+    max-width: 100%;
+    padding-left: 16px;
+    display: block;
+    opacity: 1;
+  }
+
+  .home-article__info {
+    display: none;
+  }
+
+  .promo-panel-item .home-article-group__article .text-btn {
+    margin-top: 0;
+  }
+  .full-width-panel {
+    margin-top: 20px;
+  }
+
+  .full-width-panel__wrapper {
+    transform: none;
+    max-width: none;
+    margin: 0;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+  }
+
+  .social-share {
+    padding-bottom: 95px;
+  }
+
+  .accordion--disabled-large .accordion__title {
+    font: normal 400 14px/3.42857 "PingFang SC","Hiragino Sans GB","Noto Sans CJK SC","Source Han Sans SC","Microsoft YaHei","SimHei",Helvetica,Arial,serif;
+    line-height: normal;
+    border-top: 1px solid #c7c7c7;
+    position: relative;
+  }
+
+  .accordion--disabled-large .accordion__button {
+    cursor: pointer;
+    text-align: left;
+    position: relative;
+    padding: 20px 0;
+    z-index: 1;
+    display: block;
+    width: 100%;
+  }
+  .full-width-panel__article {
+    background: rgba(0,0,0,.3);
+    color: #fff;
+    width: 100%;
+    height: 130px;
+    top: initial;
+    bottom: 0;
+    transform: none;
+  }
+
+  .accordion__button .icon {
+    color: #00ADEF;
+    font-weight: normal;
+    font-size: 100%;
+    position: absolute;
+    right: 3px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .accordion__button .icon-jiantouxiangshang {
+    display: none;
+  }
+
+  .accordion--disabled-large .accordion__pane {
+    display: none;
+    padding: 0 10px 10px;
+  }
+
+  .accordion--disabled-large .accordion__button {
+    cursor: pointer;
+    text-align: left;
+    width: 100%;
+    position: relative;
+    padding: 20px 0;
+    z-index: 1;
+  }
+
+  .accordion--disabled-large .accordion__item--active .accordion__pane {
+    display: block !important;
+  }
+  
+  .accordion--disabled-large .accordion__item--active .icon-jiantouxiangxia {
+    display: none;
+  }
+  .accordion--disabled-large .accordion__item--active .icon-jiantouxiangshang {
+    display: block;
+  }
+
+
+}
+
+@media screen and (min-width: 980px) {
+  .wrapper {
+    width: calc(940/980 * 100%);
+    max-width: 940px;
+  }
+
+  .global-navigation-tab__items {
+    margin: 5px 0;
+  }
+  .promo-panel__item--medium {
+    width: 620px;
+  }
+
+  .promo-panel__item--small {
+    width: 310px;
+  }
+  .home-article {
+    padding: 40px;
+  }
+  .footer__accordion-item {
+    width: calc(25% - 15px);
+  }
+}
+
+@media screen and (min-width: 768px) and (min-width: 980px) {
+  .top-nav__link {
+    padding-left: 30px;
+    padding-right: 20px;
+  }
+
+  .top-nav__item .top-nav__dropdown::before {
+    margin-left: -3px;
+  }
+
+  .global-navation-tab__item {
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+}
+
+
+
+
