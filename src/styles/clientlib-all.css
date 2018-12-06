@@ -703,7 +703,7 @@ img {
   color: #333;
 }
 
-.footer__accordion-item.stayl-connected__other-sites {
+.footer__accordion-item.stay-connected__other-sites {
   margin-right: 0;
 }
 
@@ -716,6 +716,107 @@ img {
 .stay-connected__other-link {
   color: #666;
   font-size: 18px;
+}
+
+.stay-connected__link-container {
+  margin-top: 20px;
+}
+
+.stay-connected__qr-container {
+  position: relative;
+  height: 44px;
+  transition: height .5s;
+}
+.stay-connected__social-links-list {
+  display: inline-block;
+  padding-left: 20px;
+}
+.stay-connected__social-links-list:first-child {
+  padding-left: 0;
+}
+
+.stay-connected__social-link {
+  font-size: 40px;
+  color: #010101;
+  display: inline-block;
+  width: 44px;
+  height: 44px;
+  vertical-align: top;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.stay-connected__social-links-image {
+  width: 100%;
+  opacity: 1;
+}
+
+.footer .stay-connected_Qr-wrapper {
+  position: absolute;
+  background: #fff;
+  left: -100%;
+  right: -100%;
+  top: 68px;
+  text-align: center;
+  transition-duration: .3s;
+}
+
+.footer .stay-connected_Qr-img {
+  height: 136px;
+  margin: 24px 0;
+}
+
+.toggle-drawer--open {
+  max-height:1000px;
+}
+
+.stay-connected__linkcontain-image:after {
+  content: "";
+  width: 0;
+  height: 0;
+  border-left: 13px solid transparent;
+  border-right: 13px solid transparent;
+  border-bottom: 13px solid #fff;
+  position: absolute;
+  top: 59px;
+  left: 50%;
+  margin-left: 13px;
+}
+
+.legal {
+  background-color: #222;
+  margin-top: 30px;
+  display: box;
+  display: -webkit-box;
+  display: -moz-box;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+}
+
+.legal .wrapper {
+  display: -webkit-box;
+  display: -moz-box;
+  display: flex;
+  -webkit-box-pack: center;
+  -moz-box-pack: center;
+  justify-content: center;
+  align-content: center;
+}
+
+.legal__item {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+.legal__item:last-child {
+  margin-right: 0;
+}
+
+.legal__link {
+  color: #aaa;
+  font: normal 400 12px/normal "PingFang SC","Hiragino Sans GB","Noto Sans CJK SC","Source Han Sans SC","Microsoft YaHei","SimHei",Helvetica,Arial,serif;
+
 }
 
 /* media */
@@ -752,11 +853,6 @@ img {
     display: table;
   }
 
-  .wrapper {
-    width: calc(700/768 * 100%);
-    margin: 0 auto;
-  }
-  
   .sub-nav__level {
     height: 108px;
     display: inline-table;
@@ -1130,6 +1226,35 @@ img {
     color: #666;
     line-height: normal;
   }
+  .footer__accordion-item.stay-connected__stay-in-touch {
+    border-top: 1px solid #ccc;
+    padding: 20px 0 35px;
+  }
+  .footer .wrapper {
+    margin: 0 auto;
+  }
+
+  .wrapper {
+    width: calc(700/768 * 100%);
+    margin: 0 auto;
+  }
+
+  .stay-connected__qr-container--active {
+    height: 188px;
+  }
+  .legal {
+    height: 50px;
+  }
+  
+  .legal__links-container {
+    margin-right: 0;
+    width: 100%;
+    display: -webkit-box;
+    display: -moz-box;
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-around;
+  }
 }
 
 @media screen and (max-width: 767px) {
@@ -1325,15 +1450,44 @@ img {
   .accordion--disabled-large .accordion__item--active .icon-jiantouxiangshang {
     display: block;
   }
+  .stay-connected__stay-in-touch {
+    -webkit-box-ordinal-group: 7;
+    -moz-box-ordinal-group: 7;
+    -webkit-order: 6;
+    -ms-flex-order: 6;
+    order: 6;
+    width: calc(100% - 20px);
+  }
 
+  .legal {
+    padding: 20 0;
+  }
 
+  .legal__links-container {
+    text-align: center;
+    display: -webkit-box;
+    display: -moz-box;
+    display: flex;
+    flex-wrap: wrap;
+    -webkit-box-pack: center;
+    justify-content: center;
+  }
+    
+  .legal__item {
+    margin-right: 10px;
+  }
+
+  .legal__item:first-child {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+  .legal__link {
+    color: #999;
+  }
 }
 
 @media screen and (min-width: 980px) {
-  .wrapper {
-    width: calc(940/980 * 100%);
-    max-width: 940px;
-  }
 
   .global-navigation-tab__items {
     margin: 5px 0;
@@ -1350,6 +1504,11 @@ img {
   }
   .footer__accordion-item {
     width: calc(25% - 15px);
+  }
+
+  .wrapper {
+    width: calc(940/980 * 100%);
+    max-width: 940px;
   }
 }
 

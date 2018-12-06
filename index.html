@@ -942,18 +942,58 @@
     <section class="accordion wrapper stay-connected__stay-in-touch footer__accordion-item">
       <h4 class="stay-connected__title footer__accordion-item-heading">关注我们</h4>
       <div class="stay-connected__link-container">
-        <ul class="stay-connected__social-links-container right-to-left-block stay-connected__qr-container">
+        <ul class="stay-connected__social-links-container right-to-left-block stay-connected__qr-container stay-connected__qr-container--active">
           <li class="stay-connected__social-links-list">
             <a class="icon-mb stay-connected__social-link stay-connected__linkcontain-image qr-controller">
-              <img class="stay-connected__social-links-image stay-connected__social-links-icon lazy-loader lazy-loader__asset lazy-loader__asset--loaded" src="https://www.mercedes-benz.com.cn/content/dam/mb-cn/common/social/wechat.png">
-              <img class="stay-connected__social-links-image stay-connected__social-links-icon-next lazy-loader lazy-loader__asset lazy-loader__asset--loaded" src="https://www.mercedes-benz.com.cn/content/dam/mb-cn/common/social/wechat_mouse_over.png">
+              <img src="https://www.mercedes-benz.com.cn/content/dam/mb-cn/common/social/wechat.png" alt="" class="stay-connected__social-links-image stay-connected__social-links-icon lazy-loader lazy-loader__asset lazy__asset--loaded">
+              <img src="https://www.mercedes-benz.com.cn/content/dam/mb-cn/common/social/wechat_mouse_over.png" alt="" class="stay-connected__social-links-image stay-connected__social-links-icon lazy-loader lazy-loader__asset lazy__asset--loaded">
             </a>
-            <div class="stay-connected_Qr-wrapper toggle-drawer"></div>
+            <div id="SocialQrcontainner0" class="stay-connected_Qr-wrapper toggle-drawer toggle-drawer--open">
+              <picture class="lazy-loader">
+                <source media="(max-width: 767)" srcset="https://www.mercedes-benz.com.cn/content/dam/mb-cn/footer/webchat-QR-code-M.png" class="lazy-loader__asset lazy-loader__asset--loaded">
+                <img src="https://www.mercedes-benz.com.cn/content/dam/mb-cn/footer/webchat-QR-code-D.png" alt="" class="stay-connected_Qr-img lazy-loader__asset lazy-loader__asset--loaded">
+              </picture>
+            </div>
+          </li>
+          <li class="stay-connected__social-links-list">
+            <a class="icon-mb stay-connected__social-link stay-connected__linkcontain-image qr-controller">
+              <img src="https://www.mercedes-benz.com.cn/content/dam/mb-cn/common/social/sina.png" alt="" class="stay-connected__social-links-image stay-connected__social-links-icon lazy-loader lazy-loader__asset lazy__asset--loaded">
+              <img src="https://www.mercedes-benz.com.cn/content/dam/mb-cn/common/social/sina_mouse_over.png" alt="" class="stay-connected__social-links-image stay-connected__social-links-icon lazy-loader lazy-loader__asset lazy__asset--loaded">
+            </a>
+          </li>
+          <li class="stay-connected__social-links-list">
+            <a class="icon-mb stay-connected__social-link stay-connected__linkcontain-image qr-controller">
+              <img src="https://www.mercedes-benz.com.cn/content/dam/mb-cn/common/social/zhihu.png" alt="" class="stay-connected__social-links-image stay-connected__social-links-icon lazy-loader lazy-loader__asset lazy__asset--loaded">
+              <img src="https://www.mercedes-benz.com.cn/content/dam/mb-cn/common/social/zhihu_mouse_over.png" alt="" class="stay-connected__social-links-image stay-connected__social-links-icon lazy-loader lazy-loader__asset lazy__asset--loaded">
+            </a>
           </li>
         </ul>
       </div>
     </section>
-    <section class="legal"></section>
+    <section class="legal">
+      <div class="wrapper">
+        <ul class="legal_links-container">
+          <li class="legal__item">
+            <a href="#" class="legal__link">© 2018 重庆梅赛德斯-奔驰销售服务有限公司 版权所有</a>
+          </li>
+          <li class="legal__item">
+            <a href="#" class="legal__link">网站地图</a>
+          </li>
+          <li class="legal__item">
+            <a href="#" class="legal__link">隐私条款</a>
+          </li>
+          <li class="legal__item">
+            <a href="#" class="legal__link">渝ICP备09046804号-2</a>
+          </li>
+          <li class="legal__item">
+            <a href="#" class="legal__link">法律声明</a>
+          </li>
+          <li class="legal__item">
+            <a href="#" class="legal__link">渝公网安备 11010502035702号</a>
+          </li>
+        </ul>
+      </div>
+    </section>
   </footer>
 </div>
 <script src="./src/js/iconfont.js"></script>
